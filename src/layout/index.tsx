@@ -9,11 +9,11 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className={`min-h-screen flex flex-col text-light`}>
+    <div className={`h-screen flex flex-col text-light`}>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 overflow-y-auto">
         <div
-          className={`w-full mx-auto px-4`}
+          className={`w-full mx-auto`}
           style={{ maxWidth: `${LayoutConfig.contentMaxWidth}px`, backgroundColor: LayoutConfig.contentBg }}
         >
           {children}

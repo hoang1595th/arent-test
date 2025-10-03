@@ -48,7 +48,7 @@ export default function Header() {
             <span className="text-primary-500"><IconEdit /></span>
             <span className="text-base">自分の記録</span>
           </Link>
-          <Link to="/my-page" className="flex items-center gap-2 hover:opacity-90">
+          <Link to="/top-page" className="flex items-center gap-2 hover:opacity-90">
             <span className="text-primary-500"><IconMedal /></span>
             <span className="text-base">チャレンジ</span>
           </Link>
