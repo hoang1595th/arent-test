@@ -7,21 +7,21 @@ type MyDiaryProps = {
 
 export default function MyDiary({ date, time, title, excerpt }: MyDiaryProps) {
   return (
-    <div className="border border-gray-400/40 bg-[#414141] text-light p-5 w-[231px] h-[231px]">
-      <div className="w-[200px]">
-        <div className="text-2xl font-bold text-dark-500/90">
+    <div className="border-2 border-dark-400/60 text-gray-400 p-4 pb-7 w-[231px] h-[231px] flex">
+      <div className="flex-1 overflow-hidden">
+        <div className="text-lg font-bold">
           {date}
         </div>
-        <div className="text-2xl font-bold text-dark-500/90">
+        <div className="text-lg font-bold">
           {time}
         </div>
 
         <div
-          className="mt-6 text-gray-400 text-base"
+          className="mt-2 text-sm"
           style={{ height: '132px', display: '-webkit-box', WebkitLineClamp: 6 as unknown as number, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
         >
-          <p className="mb-3">{title}</p>
-          <p className="leading-7">
+          <p className="">{title}</p>
+          <p className="">
             {excerpt}
           </p>
         </div>
@@ -29,5 +29,3 @@ export default function MyDiary({ date, time, title, excerpt }: MyDiaryProps) {
     </div>
   )
 }
-
-

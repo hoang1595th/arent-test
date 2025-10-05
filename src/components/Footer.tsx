@@ -3,7 +3,7 @@ import { LayoutConfig } from "../layout/LayoutConfig";
 export default function Footer() {
     return (
       <footer className={``} style={{ height: `${LayoutConfig.footerHeight}px`, backgroundColor: LayoutConfig.footerBg }}>
-        <div className="w-full mx-auto px-4 h-full flex items-center justify-center space-x-12 text-light text-sm" style={{ maxWidth: `${LayoutConfig.contentMaxWidth}px` }}>
+        <div className="w-full mx-auto px-4 h-full flex items-center justify-start space-x-11 text-light text-xs" style={{ maxWidth: `${LayoutConfig.contentMaxWidth}px` }}>
           <a href="#" className="hover:underline">
             会員登録
           </a>
@@ -26,4 +26,3 @@ export default function Footer() {
       </footer>
     );
   }
-  

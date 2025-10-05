@@ -24,17 +24,11 @@ export default function TopPage() {
   ];
 
   return (
-    <div className="p-6">
-      {/* Section 1 */}
-      <section className="mb-6">
-        <h1 className="text-2xl font-bold mb-4">Top Page</h1>
-        <p className="text-gray-400">This is the first section of the top page with some introductory content.</p>
-      </section>
-
-      {/* Section 2 */}
+    <div className="py-14 space-y-14">
+      {/* Section 1 - Meal Categories */}
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-3">Meal Categories</h2>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-14 justify-center">
           {hexData.map((hex, index) => (
             <Hex
               key={index}
@@ -45,10 +39,10 @@ export default function TopPage() {
         </div>
       </section>
 
-      {/* Section 3 */}
+      {/* Section 2 - Photo Gallery */}
       <section>
         <h2 className="text-xl font-semibold mb-3">Photo Gallery</h2>
-        <div className="grid grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-4 gap-2 mb-[28px]">
           {photoData.map((photo, index) => (
             <Photo
               key={index}
@@ -59,7 +53,7 @@ export default function TopPage() {
           ))}
         </div>
         <div className="flex justify-center">
-          <Button 
+          <Button
             text="記録をもっと見る"
             onClick={() => console.log('See more records clicked')}
           />

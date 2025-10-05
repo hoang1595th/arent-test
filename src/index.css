@@ -53,9 +53,32 @@
 
 @layer base {
   body {
-    @apply font-sans;
+    @apply font-inter;
     height: 100vh;
     margin: 0;
     overflow: hidden;
   }
+}
+
+/* Custom scrollbar - cross browser */
+/* Firefox */
+* {
+  scrollbar-width: 6px; /* approximates 6px */
+  scrollbar-color: #FFCC21 #777777;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #FFCC21;
+  border-radius: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #777777;
+  border-radius: 6px;
 }

@@ -11,30 +11,26 @@ type MyExerciseProps = {
 
 export default function MyExercise({ date, items }: MyExerciseProps) {
   return (
-    <div className="bg-[#414141] text-light p-6">
-      <div className="flex items-baseline justify-between mb-4">
-        <div>
-          <div className="text-sm text-gray-300 tracking-wide">MY EXERCISE</div>
-          <div className="text-3xl font-bold text-light mt-1">{date}</div>
-        </div>
+    <div className="bg-[#414141] text-light px-6 py-4 h-[264px]">
+      <div className="flex items-start gap-4 mb-1">
+        <div className="text-sm w-20 tracking-wide">MY EXERCISE</div>
+        <div className="text-2xl">{date}</div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 h-[264px] overflow-y-auto pr-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 overflow-y-auto pr-2 h-[192px]">
         {items.map((it, idx) => (
-          <div key={idx} className="flex items-start justify-between border-t border-gray-500/40 py-4">
-            <div className="flex-1">
+          <div key={idx} className="flex items-start justify-between border-b border-gray-500/40 h-10">
+            <div className="flex-1 pb-1">
               <div className="flex items-center gap-2">
-                <span className="text-[#FFCC21]">•</span>
-                <span className="text-lg">{it.name}</span>
+                <span className="text-white">•</span>
+                <span className="text-sm leading-none">{it.name}</span>
               </div>
-              <div className="pl-5 text-[#FFCC21]">{it.kcal}kcal</div>
+              <div className="pl-4 text-[#FFCC21] text-sm leading-none">{it.kcal}kcal</div>
             </div>
-            <div className="text-[#FFCC21] text-2xl whitespace-nowrap">{it.minutes} min</div>
+            <div className="text-[#FFCC21] text-lg whitespace-nowrap">{it.minutes} min</div>
           </div>
         ))}
       </div>
     </div>
   )
 }
-
-
